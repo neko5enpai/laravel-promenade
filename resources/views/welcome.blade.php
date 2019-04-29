@@ -85,7 +85,9 @@
                 </div>
 
                 <div class="links">
-                        <a href="{{ url('home') }}">Home</a>
+                    <a href="{{ url('home') }}">Home</a>
+                    <a href="{{ url('creer') }}">Créer</a>
+                    <a href="{{ url('editer') }}">Editer</a>
 
 
                     {{-- <a href="https://laravel.com/docs">Docs</a>

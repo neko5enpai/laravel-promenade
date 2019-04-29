@@ -7,14 +7,17 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home() {
-        return view('pages.promenade');
+        $title = 'Les Promenades';
+        return view('pages.promenade', compact('title'));
     }
 
     public function creer() {
-        return view('pages.creer');
+        $title = 'Créer une promenade';
+        return view('pages.creer', compact('title'));
     }
 
     public function editer() {
-        return view('pages.editer');
+        $title = 'Editer une promenade';
+        return view('pages.editer', compact('title'));
     }
 }
