@@ -15,16 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*
 Route::get('/home', function () {
-    return view ('pages.home');
+    return view ('pages.promenade');
 });
 
 Route::get('/creer', function () {
-/*     return view('Créer'); */
-return view ('pages.creer');
+    return view ('pages.creer');
 });
 
 Route::get('/editer', function () {
-   /*  return view('Modifier'); */
     return view ('pages.editer');
-});
+}); */
+
+Route::get('/home', 'PagesController@home');
+Route::get('/creer', 'PagesController@creer');
+Route::get('/editer', 'PagesController@editer');
+

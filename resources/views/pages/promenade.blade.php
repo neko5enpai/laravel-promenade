@@ -64,6 +64,8 @@
         </style> --}}
     </head>
     <body>
+        <h1>Les Promenades</h1>
+        <p>Voici la liste des promenades</p>
         
     </body>
 </html>
