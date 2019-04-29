@@ -16,15 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return view('Home');
+    return view ('pages.home');
 });
 
 Route::get('/creer', function () {
 /*     return view('Créer'); */
-return 'Nous sommes dans la page Créer';
+return view ('pages.creer');
 });
 
 Route::get('/editer', function () {
    /*  return view('Modifier'); */
-    return 'Nous sommes dans la page Modifier';
+    return view ('pages.editer');
 });
