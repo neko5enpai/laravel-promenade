@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function () {
+    return view('Home');
+});
+
+Route::get('/creer', function () {
+/*     return view('Créer'); */
+return 'Nous sommes dans la page Créer';
+});
+
+Route::get('/editer', function () {
+   /*  return view('Modifier'); */
+    return 'Nous sommes dans la page Modifier';
+});
