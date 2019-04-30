@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Promenade;
 
 class PromenadesController extends Controller
 {
@@ -13,7 +14,8 @@ class PromenadesController extends Controller
      */
     public function index()
     {
-        //
+        $promenades = Promenade::all();
+        return view('promenades.index')->with('promenades', $promenades);
     }
 
     /**

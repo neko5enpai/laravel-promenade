@@ -28,8 +28,8 @@ Route::get('/editer', function () {
     return view ('pages.editer');
 }); */
 
-Route::get('/home', 'PagesController@home');
-Route::get('/creer', 'PagesController@creer');
-Route::get('/editer', 'PagesController@editer');
+Route::get('/promenades', 'PromenadesController@index');
+Route::get('/creer', 'PromenadesController@creer');
+Route::get('/editer', 'PromenadesController@editer');
 
 Route::resource('promenades', 'PromenadesController');
