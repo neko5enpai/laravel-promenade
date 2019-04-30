@@ -13,13 +13,18 @@ class CreatePromenadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('promenades', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('title');
-            $table->mediumText('body');
-            $table->timestamps();
+        Schema::create('Promenade', function (Blueprint $table) {
+            $table->string('titre');
+            $table->string('auteur');
+            $table->string('pays');
+            $table->string('ville');
+            $table->string('codePostal');
+            $table->string('depart');
+            $table->binary('descr');
+            $table->string('photo');
         });
     }
+
 
     /**
      * Reverse the migrations.

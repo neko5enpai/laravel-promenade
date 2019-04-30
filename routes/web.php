@@ -32,3 +32,4 @@ Route::get('/home', 'PagesController@home');
 Route::get('/creer', 'PagesController@creer');
 Route::get('/editer', 'PagesController@editer');
 
+Route::resource('promenades', 'PromenadesController');
