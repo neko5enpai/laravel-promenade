@@ -47,7 +47,8 @@ class PromenadesController extends Controller
      */
     public function show($id)
     {
-        //
+        $promenade = Promenade::find($id);
+        return view('promenades.show')->with('promenade', $promenade);
     }
 
     /**

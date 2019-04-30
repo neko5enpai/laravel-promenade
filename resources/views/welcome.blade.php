@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('home') }}">Home</a>
+                    <a href="{{ url('promenades') }}">Promenades</a>
                     <a href="{{ url('creer') }}">Créer</a>
                     <a href="{{ url('editer') }}">Editer</a>
 

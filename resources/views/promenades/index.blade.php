@@ -4,9 +4,9 @@
     <h1>Promenades</h1>
     @if (count($promenades) > 0)
         @foreach ($promenades as $promenade)
-            <div class="well">
-                <h3>{{$promenade->titre}}<h3>
-                <small>Ville: {{$promenade->ville}}</small>
+            <div style="border-style:double">
+                <h3><a href="/promenades/{{$promenade->ID}}">{{$promenade->titre}}</a><h3>
+                <h4>Ville: {{$promenade->ville}}</h4>
             </div>
         @endforeach
         
