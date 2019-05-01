@@ -10,4 +10,8 @@
         {!!$promenade->descr!!}
     </div>
     <a href="/promenades/{{$promenade->ID}}/edit" class="btn btn-default">Editer</a>
-@endsection
+    {!!Form::open(['action' => ['PromenadesController@destroy', $promenade->ID], 'method' => 'POST', 'class' => 'float-right'])!!}
+        {{Form::hidden('_method', 'DELETE')}}
+        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+    {!!Form::close()!!}
+    @endsection

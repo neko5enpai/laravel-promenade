@@ -49,16 +49,16 @@ class PromenadesController extends Controller
     
 
     // Créer Promenade
-    $promenade = new Promenade;
-    $promenade->titre = $request->input('titre');
-    $promenade->auteur = $request->input('auteur');
-    $promenade->pays = $request->input('pays');
-    $promenade->ville = $request->input('ville');
-    $promenade->codePostal = $request->input('codePostal');
-    $promenade->depart = $request->input('depart');
-    $promenade->arrivee = $request->input('arrivee');
-    $promenade->descr = $request->input('descr');
-    $promenade->save();
+        $promenade = new Promenade;
+        $promenade->titre = $request->input('titre');
+        $promenade->auteur = $request->input('auteur');
+        $promenade->pays = $request->input('pays');
+        $promenade->ville = $request->input('ville');
+        $promenade->codePostal = $request->input('codePostal');
+        $promenade->depart = $request->input('depart');
+        $promenade->arrivee = $request->input('arrivee');
+        $promenade->descr = $request->input('descr');
+        $promenade->save();
 
     return redirect('/promenades')->with('success', 'Promenade créée');
 
@@ -110,16 +110,16 @@ class PromenadesController extends Controller
     
 
     // Créer Promenade
-    $promenade = Promenade::find($id);
-    $promenade->titre = $request->input('titre');
-    $promenade->auteur = $request->input('auteur');
-    $promenade->pays = $request->input('pays');
-    $promenade->ville = $request->input('ville');
-    $promenade->codePostal = $request->input('codePostal');
-    $promenade->depart = $request->input('depart');
-    $promenade->arrivee = $request->input('arrivee');
-    $promenade->descr = $request->input('descr');
-    $promenade->save();
+        $promenade = Promenade::find($id);
+        $promenade->titre = $request->input('titre');
+        $promenade->auteur = $request->input('auteur');
+        $promenade->pays = $request->input('pays');
+        $promenade->ville = $request->input('ville');
+        $promenade->codePostal = $request->input('codePostal');
+        $promenade->depart = $request->input('depart');
+        $promenade->arrivee = $request->input('arrivee');
+        $promenade->descr = $request->input('descr');
+        $promenade->save();
 
     return redirect('/promenades')->with('success', 'Promenade mise à jour');
     }
@@ -132,6 +132,8 @@ class PromenadesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $promenade = Promenade::find($id);
+        $promenade->delete();
+        return redirect('/promenades')->with('success', 'Promenade supprimée');
     }
 }

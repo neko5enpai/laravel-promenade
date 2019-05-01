@@ -87,7 +87,8 @@
                 <div class="links">
                     <a href="<?php echo e(url('promenades')); ?>">Promenades</a>
                     <a href="<?php echo e(url('promenades/creer')); ?>">Créer</a>
-                    <a href="<?php echo e(url('promenades/editer')); ?>">Editer</a>
+                    
+
 
 
                     

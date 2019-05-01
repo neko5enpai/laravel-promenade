@@ -9,7 +9,7 @@ class Promenade extends Model
     // Table name
     protected $table = 'Promenade';
     // Primary Key
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'ID';
     // Timestamps
     public $timestamps = false;
 

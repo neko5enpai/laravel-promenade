@@ -3,7 +3,7 @@
 @section('content')
     <h1>Editer une Promenade</h1>
 
-    {!!Form::open(['action' => ['PromenadesController@update', $promenade->id], 'method' => 'POST']) !!}
+    {!!Form::open(['action' => ['PromenadesController@update', $promenade->ID], 'method' => 'POST']) !!}
         <div class="form-group">
             {{Form::label('titre','Titre:')}}
             {{Form::text('titre', $promenade->titre, ['class' => 'form-control'])}}

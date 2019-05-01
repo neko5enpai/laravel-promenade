@@ -30,6 +30,6 @@ Route::get('/editer', function () {
 
 Route::get('/promenades', 'PromenadesController@index');
 Route::get('/promenades/creer', 'PromenadesController@create');
-Route::get('promenades/editer', 'PromenadesController@edit');
+/* Route::get('promenades/editer', 'PromenadesController@edit'); */
 
 Route::resource('promenades', 'PromenadesController');
