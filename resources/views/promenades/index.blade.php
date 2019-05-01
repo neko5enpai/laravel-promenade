@@ -9,7 +9,7 @@
                 <h4>Ville: {{$promenade->ville}}</h4>
             </div>
         @endforeach
-        
+        {{$promenades->links()}}
     @else
         <p>Nous n'avons pas trouvé de promenade</p>
     @endif

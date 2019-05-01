@@ -29,7 +29,7 @@ Route::get('/editer', function () {
 }); */
 
 Route::get('/promenades', 'PromenadesController@index');
-Route::get('/creer', 'PromenadesController@creer');
-Route::get('/editer', 'PromenadesController@editer');
+Route::get('/promenades/creer', 'PromenadesController@create');
+Route::get('/editer', 'PromenadesController@edit');
 
 Route::resource('promenades', 'PromenadesController');

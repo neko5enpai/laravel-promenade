@@ -14,7 +14,7 @@ class PromenadesController extends Controller
      */
     public function index()
     {
-        $promenades = Promenade::all();
+        $promenades = Promenade::orderBy('ID', 'desc')->paginate(2);
         return view('promenades.index')->with('promenades', $promenades);
     }
 
@@ -25,7 +25,7 @@ class PromenadesController extends Controller
      */
     public function create()
     {
-        //
+        return view('promenades.creer');
     }
 
     /**
@@ -36,9 +36,33 @@ class PromenadesController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $this->validate($request, [
+            'titre' => 'required',
+            'descr' => 'required',
+            'pays' => 'required',
+            'ville' => 'required',
+            'codePostal' => 'required',
+            'depart' => 'required',
+            'arrivee' => 'required',
+            'descr' => 'required'
+        ]);
+    
 
+    // Créer Promenade
+    $promenade = new Promenade;
+    $promenade->titre = $request->input('titre');
+    $promenade->auteur = $request->input('auteur');
+    $promenade->pays = $request->input('pays');
+    $promenade->ville = $request->input('ville');
+    $promenade->codePostal = $request->input('codePostal');
+    $promenade->depart = $request->input('depart');
+    $promenade->arrivee = $request->input('arrivee');
+    $promenade->descr = $request->input('descr');
+    $promenade->save();
+
+    return redirect('/promenades')->with('success', 'Promenade créée');
+
+    }
     /**
      * Display the specified resource.
      *
