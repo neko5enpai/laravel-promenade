@@ -11,6 +11,6 @@ class Promenade extends Model
     // Primary Key
     protected $primaryKey = 'id';
     // Timestamps
-    public $timestamps = true;
+    public $timestamps = false;
 
 }

@@ -23,10 +23,15 @@
             </ul>
 
             <ul class="nav navbar-nav">
-              <li><a href="/home">Home</a></li>
               <li><a href="/promenades">Promenades</a></li>
+              <li><a href="/promenades/creer">Créer</a></li>
+              <li><a href="/promenades/editer">Editer</a></li>
             </ul>
-            </ul>
+
+            {{-- <ul class="nav navbar-nav navbar-right">
+                <li><a href="/promenades/creer">Créer Promenade</a></li>
+            </ul> --}}
+            
         </div>
     </div>
 </nav>

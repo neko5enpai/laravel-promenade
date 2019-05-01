@@ -86,8 +86,9 @@
 
                 <div class="links">
                     <a href="{{ url('promenades') }}">Promenades</a>
-                    <a href="{{ url('creer') }}">Créer</a>
-                    <a href="{{ url('editer') }}">Editer</a>
+                    <a href="{{ url('promenades/creer') }}">Créer</a>
+                    <a href="{{ url('promenades/editer') }}">Editer</a>
+
 
 
                     {{-- <a href="https://laravel.com/docs">Docs</a>
