@@ -84,7 +84,7 @@ class PromenadesController extends Controller
     public function edit($id)
     {
         $promenade = Promenade::find($id);
-        return view('promenades.show')->with('promenade', $promenade);
+        return view('promenades.editer')->with('promenade', $promenade);
 
     }
 
@@ -121,7 +121,7 @@ class PromenadesController extends Controller
     $promenade->descr = $request->input('descr');
     $promenade->save();
 
-    return redirect('/promenades')->with('success', 'Promenade créée');
+    return redirect('/promenades')->with('success', 'Promenade mise à jour');
     }
 
     /**

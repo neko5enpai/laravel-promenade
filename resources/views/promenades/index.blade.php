@@ -6,11 +6,12 @@
         @foreach ($promenades as $promenade)
             <div style="border-style:double">
                 <h3><a href="/promenades/{{$promenade->ID}}">{{$promenade->titre}}</a><h3>
-                <h4>Ville: {{$promenade->ville}}</h4>
+                    <h4>Pays: {{$promenade->pays}}</h4>
+                    <h4>Ville: {{$promenade->ville}}</h4>
             </div>
         @endforeach
         {{$promenades->links()}}
     @else
-        <p>Nous n'avons pas trouvé de promenade</p>
+        <p>Nous n'avons pas trouvé de promenade.</p>
     @endif
 @endsection

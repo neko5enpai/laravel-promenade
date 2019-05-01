@@ -1,9 +1,9 @@
 @extends('templates.app')
 
 @section('content')
-    <h1>Editer Promenades</h1>
+    <h1>Editer une Promenade</h1>
 
-    {{Form::open(['action' => ['PromenadesController@update', $promenade->id], 'method' => 'POST'])}}
+    {!!Form::open(['action' => ['PromenadesController@update', $promenade->id], 'method' => 'POST']) !!}
         <div class="form-group">
             {{Form::label('titre','Titre:')}}
             {{Form::text('titre', $promenade->titre, ['class' => 'form-control'])}}
@@ -43,5 +43,5 @@
         {{Form::hidden('_method', 'PUT')}}
         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
 
-    {{Form::close()}}
+    {!! Form::close() !!}
 @endsection
